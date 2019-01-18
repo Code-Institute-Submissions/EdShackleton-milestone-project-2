@@ -1,13 +1,19 @@
 /* Background */
 
-.background {
+body {
+  background: url(/assets/images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.opaque-overlay {
+    position: absolute;
+    left: 0;
     height: 100%;
-    opacity: 0.8;
-    background: url(/assets/images/background.jpg) no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Navbar */
@@ -16,6 +22,7 @@
     font-family: 'Mr Dafoe', cursive;
     margin-top: 5px;
     margin-bottom: 10px;
+    color: #9c00b1;
 }
 
 nav.navbar.navbar-default {
@@ -24,9 +31,41 @@ nav.navbar.navbar-default {
     border: none;
 }
 
+/* Titles */
+
+#top-title {
+   margin: 5px 0px;
+   color: #444344;
+}
+
+#sub-title {
+   margin: 5px 0px; 
+   color: #444344;
+}
+
+/* Search Bar */
+
+#address {
+    margin: 5px;
+    border: 2px solid #444344;
+}
+
+#go-button {
+    border: 2px solid #444344;
+}
+
 /* Map */
 
 #map {
     height: 500px;
     width: 100%;
+    border: 2px solid #444344;
+}
+
+#selection-box {
+    border: 2px solid #444344;
+}
+
+#next-button {
+    border: 2px solid #444344;
 }
