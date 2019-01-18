@@ -1,19 +1,21 @@
 /* Variables */
 /* Mixins */
-.title {
-  color: black;
-  margin: 5px; }
+.title, #selection-box {
+  color: #333333;
+  margin: 5px;
+  font-family: Roboto; }
 
 #address, #go-button, #map, #selection-box, #next-button {
   margin: 5px;
   border: 1px solid black;
-  -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4); }
+  -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3); }
 
 #go-button, #next-button {
-  background-color: #9c00b1;
-  color: white; }
+  background-color: #be01d7;
+  color: white;
+  font-family: Roboto; }
 
 /* Background */
 body {
@@ -28,14 +30,15 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.3); }
+  background-color: rgba(255, 255, 255, 0.6); }
 
 /* Nav bar */
 .nav-title {
   font-family: "Mr Dafoe", cursive;
+  font-size: 32px;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #9c00b1; }
+  color: #be01d7; }
 
 nav.navbar.navbar-default {
   margin-bottom: 0px;
@@ -43,11 +46,20 @@ nav.navbar.navbar-default {
   border: none; }
 
 /* Titles */
+#top-title {
+  margin-top: 0; }
+
+#selection-box-title {
+  text-align: center; }
+
 /* Search Function */
 /* Map and results */
 #map {
   height: 500px;
   width: 100%; }
+
+#selection-box {
+  margin: 0; }
 
 /* Buttons */
 

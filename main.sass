@@ -1,23 +1,25 @@
 /* Variables */
 
-$primary-color: #9c00b1
+$primary-color: #be01d7
 
 /* Mixins */
 
 %titles
-    color: black
+    color: #333333
     margin: 5px
+    font-family: Roboto
 
 %box
     margin: 5px
     border: 1px solid black
-    -webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.4)
-    -moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.4)
-    box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.4)
+    -webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.3)
+    -moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.3)
+    box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.3)
 
 %buttons
     background-color: $primary-color
     color: white
+    font-family: Roboto
    
 /* Background */
  
@@ -33,15 +35,17 @@ body
     left: 0
     height: 100%
     width: 100%
-    background-color: rgba(255, 255, 255, 0.3)    
+    background-color: rgba(255, 255, 255, 0.6)    
 
 /* Nav bar */
 
 .nav-title
     font-family: 'Mr Dafoe', cursive
+    font-size: 32px
     margin-top: 5px
     margin-bottom: 10px
     color: $primary-color
+    
 
 nav.navbar.navbar-default
     margin-bottom: 0px
@@ -52,7 +56,13 @@ nav.navbar.navbar-default
 
 .title
     @extend %titles
-    
+
+#top-title
+    margin-top: 0
+
+#selection-box-title
+    text-align: center
+
 /* Search Function */
     
 #address
@@ -70,6 +80,8 @@ nav.navbar.navbar-default
     
 #selection-box
     @extend %box
+    @extend %titles
+    margin: 0
     
 #next-button
     @extend %box
