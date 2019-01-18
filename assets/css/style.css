@@ -1,3 +1,31 @@
+/* Background */
+
+.background {
+    height: 100%;
+    opacity: 0.8;
+    background: url(/assets/images/background.jpg) no-repeat bottom center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Navbar */
+
+.nav-title {
+    font-family: 'Mr Dafoe', cursive;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+nav.navbar.navbar-default {
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Map */
+
 #map {
     height: 500px;
     width: 100%;
