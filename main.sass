@@ -35,7 +35,7 @@ body
     left: 0
     height: 100%
     width: 100%
-    background-color: rgba(255, 255, 255, 0.6)    
+    background-color: rgba(255, 255, 255, 0.4)    
 
 /* Nav bar */
 
@@ -82,7 +82,25 @@ nav.navbar.navbar-default
     @extend %box
     @extend %titles
     margin: 0
-    
+    background-color: fff
+
+.scrollable-menu 
+    height: auto
+    max-height: 446px
+    overflow-x: hidden
+    padding-left: 0
+    width: 250px
+
+.input-group-addon:first-child
+    border: 0
+    background: white
+    border-radius: 0
+
+li.list-group-item:last-child
+    border-bottom-right-radius: 0px
+    border-bottom-left-radius: 0px
+    border-top: 0px
+
 #next-button
     @extend %box
     
@@ -93,3 +111,7 @@ nav.navbar.navbar-default
     
 #next-button
     @extend %buttons
+    
+#reset-button
+    @extend %buttons
+    

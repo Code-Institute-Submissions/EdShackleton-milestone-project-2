@@ -142,7 +142,7 @@
  //display hotels in area
 
  function getAccommodation() {
-
+     
      var request = {
          location: { lat: latitude, lng: longitude },
          radius: '500',
@@ -213,7 +213,6 @@
      }
  }
 
- //Info window when marker clicked
+//Info window when marker clicked
 
- //Remove markers when next is pressed
- 
+//Remove markers when next is pressed

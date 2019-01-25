@@ -12,7 +12,7 @@
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3); }
 
-#go-button, #next-button {
+#go-button, #next-button, #reset-button {
   background-color: #be01d7;
   color: white;
   font-family: Roboto; }
@@ -30,7 +30,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6); }
+  background-color: rgba(255, 255, 255, 0.4); }
 
 /* Nav bar */
 .nav-title {
@@ -59,7 +59,25 @@ nav.navbar.navbar-default {
   width: 100%; }
 
 #selection-box {
-  margin: 0; }
+  margin: 0;
+  background-color: fff; }
+
+.scrollable-menu {
+  height: auto;
+  max-height: 446px;
+  overflow-x: hidden;
+  padding-left: 0;
+  width: 250px; }
+
+.input-group-addon:first-child {
+  border: 0;
+  background: white;
+  border-radius: 0; }
+
+li.list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top: 0px; }
 
 /* Buttons */
 
