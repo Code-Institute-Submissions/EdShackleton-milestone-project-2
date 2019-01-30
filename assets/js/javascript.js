@@ -1,4 +1,4 @@
- //initialising map
+//initialising map
 
  var geocoder;
  var map;
@@ -117,7 +117,6 @@
              map.setZoom(15);
              longitude = marker.getPosition().lng();
              latitude = marker.getPosition().lat();
-             console.log(results);
          }
          else {
              alert('Geocode was not successful for the following reason: ' + status);
@@ -160,6 +159,18 @@
          for (var i = 0; i < results.length; i++) {
              var place = results[i];
              createMarker(results[i]);
+             
+             console.log('name:', place['name']);
+            
+             if('rating:', place['rating']) {
+             console.log('rating:', place['rating'])    
+             } else {
+             console.log('This place has no rating')
+             }
+            
+             if(place['user_ratings_total']) {
+             console.log('based on ', place['user_ratings_total'], ' reviews')    
+            }
          }
      }
  }
@@ -180,15 +191,6 @@
      document.getElementById("next-button").onclick = getSights;
  }
 
- function callback(results, status) {
-     if (status == google.maps.places.PlacesServiceStatus.OK) {
-         for (var i = 0; i < results.length; i++) {
-             var place = results[i];
-             createMarker(results[i]);
-         }
-     }
- }
-
  //display sights in area
 
  function getSights() {
@@ -202,15 +204,6 @@
      document.getElementById("sub-title").innerHTML = "Select attractions";
      service = new google.maps.places.PlacesService(map);
      service.nearbySearch(request, callback);
- }
-
- function callback(results, status) {
-     if (status == google.maps.places.PlacesServiceStatus.OK) {
-         for (var i = 0; i < results.length; i++) {
-             var place = results[i];
-             createMarker(results[i]);
-         }
-     }
  }
 
 //Info window when marker clicked
