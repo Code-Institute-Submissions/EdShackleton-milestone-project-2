@@ -154,24 +154,46 @@
      document.getElementById("next-button").onclick = getRestaurants;
  }
 
+ var htmlString = "";
+ var LocationString = "";
+ 
  function callback(results, status) {
      if (status == google.maps.places.PlacesServiceStatus.OK) {
          for (var i = 0; i < results.length; i++) {
              var place = results[i];
-             createMarker(results[i]);
              
-             console.log('name:', place['name']);
-            
-             if('rating:', place['rating']) {
-             console.log('rating:', place['rating'])    
+             
+             var LocationName = place['name'];
+             
+             LocationString += `<div class="input-group">
+                                    <span class="input-group-addon">
+                                        <input type="checkbox" aria-label="...">
+                                    </span>
+                                    <li class="list-group-item"><strong>${LocationName}</strong><br>`;
+             
+             if(place['rating']) {
+             var LocationRating = place['rating'];
+             LocationString += `rating: ${LocationRating}<br>`;
              } else {
-             console.log('This place has no rating')
+             var LocationRating = 'This place has no rating';
+             LocationString += LocationRating;
              }
             
              if(place['user_ratings_total']) {
-             console.log('based on ', place['user_ratings_total'], ' reviews')    
-            }
+             var LocationUsers = place['user_ratings_total'];
+             LocationString += `based on ${LocationUsers} reviews</li></div>`;
+             } else {
+             var LocationUsers = '</li></div>';
+             LocationString += LocationUsers;
+             }
+             
+             
+             htmlString += LocationString;
+            
+             createMarker(results[i]);
          }
+        console.log(htmlString);
+        document.getElementById("selection-box").innerHTML = htmlString;
      }
  }
 
