@@ -67,7 +67,7 @@ nav.navbar.navbar-default {
   max-height: 446px;
   overflow-x: hidden;
   padding-left: 0;
-  width: 250px; }
+  max-width: 250px; }
 
 .input-group-addon:first-child {
   border: 0;
@@ -84,6 +84,37 @@ li.list-group-item:last-child {
 .results-box {
   margin: 0;
   background-color: fff;
-  min-height: 300px; }
+  min-height: 200px;
+  max-height: 400px; }
+
+.results-sub-title {
+  text-align: center;
+  padding: 10px; }
+
+.picture-box {
+  margin: 5px;
+  border: 1px solid black; }
+
+li.list-group-item:last-child {
+  background-color: transparent;
+  border: none; }
+
+hr {
+  width: 60% !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  border: 0 !important;
+  border-top: 1px solid #333 !important; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.results-footer {
+  font-family: "Mr Dafoe", cursive;
+  font-size: 80px;
+  margin: 30px;
+  color: #be01d7; }
 
 /*# sourceMappingURL=main.css.map */

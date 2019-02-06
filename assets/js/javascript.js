@@ -1,4 +1,4 @@
-//initialising map
+//initialising map and style
 
  var geocoder;
  var map;
@@ -226,7 +226,16 @@
      document.getElementById("sub-title").innerHTML = "Select attractions";
      service = new google.maps.places.PlacesService(map);
      service.nearbySearch(request, callback);
+     document.getElementById("next-button").onclick = getFinalResults;
+     document.getElementById("next-button").value = "Done";
  }
+
+
+//displayresults
+
+function getFinalResults() {
+    window.location.href = "/results.html";
+}
 
 //Info window when marker clicked
 
