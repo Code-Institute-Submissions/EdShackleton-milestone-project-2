@@ -1,6 +1,6 @@
 /* Variables */
 /* Mixins */
-.title, #selection-box {
+.title, #results-top-title, #selection-box {
   color: #333333;
   margin: 5px;
   font-family: Roboto; }
@@ -52,6 +52,10 @@ nav.navbar.navbar-default {
 #selection-box-title {
   text-align: center; }
 
+#results-top-title {
+  margin-top: 0;
+  text-align: center; }
+
 /* Search Function */
 /* Map and results */
 #map {
@@ -83,9 +87,9 @@ li.list-group-item:last-child {
 /*results */
 .results-box {
   margin: 0;
-  background-color: fff;
+  background-color: #fff;
   min-height: 200px;
-  max-height: 400px; }
+  max-height: 453px; }
 
 .results-sub-title {
   text-align: center;
@@ -95,7 +99,7 @@ li.list-group-item:last-child {
   margin: 5px;
   border: 1px solid black; }
 
-li.list-group-item:last-child {
+#results-page-items {
   background-color: transparent;
   border: none; }
 
@@ -106,15 +110,25 @@ hr {
   border: 0 !important;
   border-top: 1px solid #333 !important; }
 
+/*footer */
 .footer {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%; }
 
 .results-footer {
   font-family: "Mr Dafoe", cursive;
   font-size: 80px;
   margin: 30px;
-  color: #be01d7; }
+  color: #be01d7;
+  text-align: center; }
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: transparent; }
 
 /*# sourceMappingURL=main.css.map */

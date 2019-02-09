@@ -63,6 +63,11 @@ nav.navbar.navbar-default
 #selection-box-title
     text-align: center
 
+#results-top-title
+    @extend %titles
+    margin-top: 0
+    text-align: center
+
 /* Search Function */
     
 #address
@@ -120,9 +125,9 @@ li.list-group-item:last-child
 .results-box
     @extend %box
     margin: 0
-    background-color: fff
+    background-color: #fff
     min-height: 200px
-    max-height: 400px
+    max-height: 453px
 
 .results-sub-title
     text-align: center
@@ -132,7 +137,8 @@ li.list-group-item:last-child
     margin: 5px
     border: 1px solid black
     
-li.list-group-item:last-child
+    
+#results-page-items
     background-color: transparent
     border: none
     
@@ -142,10 +148,13 @@ hr
     margin-bottom: 5px !important
     border: 0 !important
     border-top: 1px solid #333 !important
-    
+
+/*footer*/
+
 .footer
     position: absolute
     bottom: 0
+    left: 0
     width: 100%
     
 .results-footer
@@ -153,5 +162,11 @@ hr
     font-size: 80px
     margin: 30px
     color: $primary-color
+    text-align: center
     
-    
+.container-fluid
+    padding-right: 0px
+    padding-left: 0px
+    margin-left: 0px
+    margin-right: 0px
+    background-color: transparent

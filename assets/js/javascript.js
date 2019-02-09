@@ -153,21 +153,22 @@
      service.nearbySearch(request, callback);
      document.getElementById("next-button").onclick = getRestaurants;
  }
+ 
+ //displaying the information
 
  var htmlString = "";
- var LocationString = "";
  
  function callback(results, status) {
      if (status == google.maps.places.PlacesServiceStatus.OK) {
          for (var i = 0; i < results.length; i++) {
              var place = results[i];
              
-             
+             var LocationString = "";
              var LocationName = place['name'];
              
              LocationString += `<div class="input-group">
                                     <span class="input-group-addon">
-                                        <input type="checkbox" aria-label="...">
+                                        <input type="checkbox" aria-label="..." onclick="chooseSelection()">
                                     </span>
                                     <li class="list-group-item"><strong>${LocationName}</strong><br>`;
              
@@ -192,7 +193,6 @@
             
              createMarker(results[i]);
          }
-        console.log(htmlString);
         document.getElementById("selection-box").innerHTML = htmlString;
      }
  }
@@ -216,12 +216,13 @@
  //display sights in area
 
  function getSights() {
-
+     
      var request = {
          location: { lat: latitude, lng: longitude },
          radius: '500',
-         type: ['bar']
+         type: ['attractions']
      };
+     
      document.getElementById("top-title").innerHTML = "What will you see?";
      document.getElementById("sub-title").innerHTML = "Select attractions";
      service = new google.maps.places.PlacesService(map);
@@ -236,7 +237,5 @@
 function getFinalResults() {
     window.location.href = "/results.html";
 }
-
-//Info window when marker clicked
 
 //Remove markers when next is pressed
