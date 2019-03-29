@@ -5,7 +5,7 @@
   margin: 5px;
   font-family: Roboto; }
 
-#address, #go-button, #map, #selection-box, #next-button, .results-box {
+#address, #map, #selection-box, #go-button, #next-button, #reset-button, .results-box {
   margin: 5px;
   border: 1px solid black;
   -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
@@ -16,6 +16,10 @@
   background-color: #be01d7;
   color: white;
   font-family: Roboto; }
+
+.nav-title, .results-footer, #place-results {
+  font-family: "Mr Dafoe", cursive;
+  color: #be01d7; }
 
 /* Background */
 body {
@@ -34,11 +38,9 @@ body {
 
 /* Nav bar */
 .nav-title {
-  font-family: "Mr Dafoe", cursive;
   font-size: 32px;
   margin-top: 5px;
-  margin-bottom: 10px;
-  color: #be01d7; }
+  margin-bottom: 10px; }
 
 nav.navbar.navbar-default {
   margin-bottom: 0px;
@@ -50,7 +52,8 @@ nav.navbar.navbar-default {
   margin-top: 0; }
 
 #selection-box-title {
-  text-align: center; }
+  text-align: center;
+  display: none; }
 
 #results-top-title {
   margin-top: 0;
@@ -64,7 +67,8 @@ nav.navbar.navbar-default {
 
 #selection-box {
   margin: 0;
-  background-color: fff; }
+  background-color: fff;
+  display: none; }
 
 .scrollable-menu {
   height: auto;
@@ -84,6 +88,12 @@ li.list-group-item:last-child {
   border-top: 0px; }
 
 /* Buttons */
+#next-button {
+  display: none; }
+
+#reset-button {
+  display: none; }
+
 /*results */
 .results-box {
   margin: 0;
@@ -94,10 +104,6 @@ li.list-group-item:last-child {
 .results-sub-title {
   text-align: center;
   padding: 10px; }
-
-.picture-box {
-  margin: 5px;
-  border: 1px solid black; }
 
 #results-page-items {
   background-color: transparent;
@@ -118,7 +124,6 @@ hr {
   width: 100%; }
 
 .results-footer {
-  font-family: "Mr Dafoe", cursive;
   font-size: 80px;
   margin: 30px;
   color: #be01d7;
@@ -130,5 +135,7 @@ hr {
   margin-left: 0px;
   margin-right: 0px;
   background-color: transparent; }
+
+/*results */
 
 /*# sourceMappingURL=main.css.map */

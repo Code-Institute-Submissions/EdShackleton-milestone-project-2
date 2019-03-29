@@ -11,7 +11,7 @@
     <title>Holiday Helper</title>
 </head>
 
-<body onload="initialize()">
+<body onload="displayResults()">
     <div class="opaque-overlay"></div>
 
     <!--header-->
@@ -36,27 +36,14 @@
                 <div class="results-box scrollable-menu">
                     <h4 class="title results-sub-title">Place</h4>
                     <hr>
-                    <div class="picture-box"></div>
+                    <div id = "place-results" class="picture-box"></div>
                 </div>
             </div>
             <div class="col-xs-3">
                 <div class="results-box scrollable-menu">
                     <h4 class="title results-sub-title">Hotel</h4>
                     <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 1</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 2</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
+                    <div id="hotel-results" class="results-list">
                     </div>
                 </div>
             </div>
@@ -64,36 +51,7 @@
                 <div class="results-box scrollable-menu">
                     <h4 class="title results-sub-title">Restaurants</h4>
                     <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 1</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 2</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 3</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 4</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
+                    <div  id="restaurant-results" class="results-list">
                     </div>
                 </div>
             </div>
@@ -101,44 +59,7 @@
                 <div class="results-box scrollable-menu">
                     <h4 class="title results-sub-title">Sights</h4>
                     <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 1</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 2</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 3</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 4</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="results-list">
-                        <li class="list-group-item" id="results-page-items">
-                            <strong>Location 5</strong>
-                            <br> rating
-                            <br> based on X reviews
-                        </li>
+                    <div  id="sights-results" class="results-list">
                     </div>
                 </div>
             </div>
@@ -157,10 +78,12 @@
         </div>
 
         <!--scripts-->
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/js/javascript.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBptNLyoO6JzdcJceDcXuyjh1KwMVLX_Zo&libraries=places&callback=initialize"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
