@@ -105,6 +105,9 @@
  }
 
  //adding geocoding
+
+var stringPlaceSelection = "";
+
  function codeAddress() {
      var address = document.getElementById('address').value;
      
@@ -114,8 +117,10 @@
      }
      placeSelection = capitalize_Words(address);
      console.log(placeSelection);
-     localStorage.setItem("placeSelection", placeSelection);
-     
+     stringPlaceSelection += placeSelection;
+     window.localStorage.setItem('stringPlaceSelection', JSON.stringify(placeSelection));
+     console.log(stringPlaceSelection);
+
      geocoder.geocode({ 'address': address }, function(results, status) {
          if (status == 'OK') {
              map.setCenter(results[0].geometry.location);
@@ -128,13 +133,12 @@
              map.setZoom(15);
              longitude = marker.getPosition().lng();
              latitude = marker.getPosition().lat();
-             $('#selection-box-title').fadeIn("fast");
              $('#next-button').fadeIn("slow");
              $('#reset-button').fadeIn("slow");
              
          }
          else {
-             alert('Geocode was not successful for the following reason: ' + status);
+             alert('Please enter a destination');
          }
      });
  }
@@ -242,7 +246,6 @@
      
      document.getElementById("top-title").innerHTML = "Where will you eat?";
      document.getElementById("sub-title").innerHTML = "Select restaurants";
-     document.getElementById("sub-title").innerHTML = "Select restaurants";
 
      service = new google.maps.places.PlacesService(map);
      service.nearbySearch(request, function(results, status) {
@@ -274,19 +277,7 @@
      
  }
 
-
-//displayresults
-
-function getFinalResults() {
-    window.location.href = "/results.html";
-    
-    sightSelections = temporarySelection;
-    temporarySelection = [];
-    console.log("Sight Selection: " + sightSelections);
-
-    document.getElementById("hotel-results").innerHTML = hotelSelection;
-    document.getElementById("place-results").innerHTML = placeSelection;
-}
+//Start Again
 
 function startAgain() {
     window.location.href = "/index.html";
@@ -320,22 +311,34 @@ function chooseSelection(resultIndex) {
     
     if(!temporarySelection.includes(locationName.innerHTML)) {
         console.log('pushing ' + locationName.innerHTML + ' into temporarySelection')
-        temporarySelection.push(locationName.innerHTML);
+        temporarySelection.push(`<br> <br><hr><br>` + locationName.innerHTML);
     } else {
         var index = temporarySelection.indexOf(locationName.innerHTML);
         console.log('Removing index number: ', index)
         temporarySelection.splice(index, 1);
     }
-    
     console.log(temporarySelection)
     
-
 }
 
-//display results on new page
 
-function displayResults() {
-    localStorage.getItem("placeSelection");
+//display results
+
+function getFinalResults() {
+    
+    sightSelections = temporarySelection;
+    temporarySelection = [];
+    console.log("Sight Selection: " + sightSelections);
+    $('#selection-section').hide(1000);
+    
+    document.getElementById("top-title").innerHTML = "Your Holiday";
+    document.getElementById("sub-title").innerHTML = "Here's what you selected";
+    
     document.getElementById("place-results").innerHTML = placeSelection;
-    console.log(placeSelection)
+    document.getElementById("hotel-results").innerHTML = hotelSelection;
+    document.getElementById("restaurant-results").innerHTML = restaurantSelections;
+    document.getElementById("sights-results").innerHTML = sightSelections;
+    
+    $('#results-section').show(1000);
+
 }

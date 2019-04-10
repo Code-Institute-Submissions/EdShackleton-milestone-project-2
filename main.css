@@ -17,7 +17,7 @@
   color: white;
   font-family: Roboto; }
 
-.nav-title, .results-footer, #place-results {
+.nav-title, .results-footer {
   font-family: "Mr Dafoe", cursive;
   color: #be01d7; }
 
@@ -95,11 +95,17 @@ li.list-group-item:last-child {
   display: none; }
 
 /*results */
+#results-section {
+  display: none; }
+
 .results-box {
   margin: 0;
   background-color: #fff;
   min-height: 200px;
-  max-height: 453px; }
+  max-height: 453px;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 25px; }
 
 .results-sub-title {
   text-align: center;
