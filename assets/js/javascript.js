@@ -115,7 +115,7 @@ var stringPlaceSelection = "";
      {
      return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
      }
-     placeSelection = capitalize_Words(address);
+     placeSelection = `<strong>` + capitalize_Words(address) + '</strong>';
      console.log(placeSelection);
      stringPlaceSelection += placeSelection;
      window.localStorage.setItem('stringPlaceSelection', JSON.stringify(placeSelection));
@@ -135,7 +135,7 @@ var stringPlaceSelection = "";
              latitude = marker.getPosition().lat();
              $('#next-button').fadeIn("slow");
              $('#reset-button').fadeIn("slow");
-             
+             getAccommodation();
          }
          else {
              alert('Please enter a destination');
@@ -311,7 +311,7 @@ function chooseSelection(resultIndex) {
     
     if(!temporarySelection.includes(locationName.innerHTML)) {
         console.log('pushing ' + locationName.innerHTML + ' into temporarySelection')
-        temporarySelection.push(`<br> <br><hr><br>` + locationName.innerHTML);
+        temporarySelection.push(locationName.innerHTML);
     } else {
         var index = temporarySelection.indexOf(locationName.innerHTML);
         console.log('Removing index number: ', index)
@@ -335,9 +335,9 @@ function getFinalResults() {
     document.getElementById("sub-title").innerHTML = "Here's what you selected";
     
     document.getElementById("place-results").innerHTML = placeSelection;
-    document.getElementById("hotel-results").innerHTML = hotelSelection;
-    document.getElementById("restaurant-results").innerHTML = restaurantSelections;
-    document.getElementById("sights-results").innerHTML = sightSelections;
+    document.getElementById("hotel-results").innerHTML = hotelSelection.join ("<br> <br><hr><br>");
+    document.getElementById("restaurant-results").innerHTML = restaurantSelections.join ("<br> <br><hr><br>");
+    document.getElementById("sights-results").innerHTML = sightSelections.join ("<br> <br><hr><br>");
     
     $('#results-section').show(1000);
 

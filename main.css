@@ -17,7 +17,7 @@
   color: white;
   font-family: Roboto; }
 
-.nav-title, .results-footer {
+.nav-title, .results-footer, #place-results {
   font-family: "Mr Dafoe", cursive;
   color: #be01d7; }
 
@@ -60,6 +60,9 @@ nav.navbar.navbar-default {
   text-align: center; }
 
 /* Search Function */
+#search-and-go {
+  align-items: center; }
+
 /* Map and results */
 #map {
   height: 500px;
@@ -143,5 +146,16 @@ hr {
   background-color: transparent; }
 
 /*results */
+#place-results {
+  font-size: 20px; }
+
+.results-sub-title {
+  margin-bottom: 30px; }
+
+#place-results {
+  font-size: 60px;
+  margin: 20px;
+  color: #be01d7;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
