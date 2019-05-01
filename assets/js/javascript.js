@@ -334,6 +334,17 @@ function getFinalResults() {
     document.getElementById("top-title").innerHTML = "Your Holiday";
     document.getElementById("sub-title").innerHTML = "Here's what you selected";
     
+    function myFunction(x) {
+    if (x.matches) {
+        document.getElementById("top-title").style.display = "none";
+        document.getElementById("sub-title").style.display = "none";
+        }
+    }
+    
+    var x = window.matchMedia("(max-width: 450px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction)
+    
     document.getElementById("place-results").innerHTML = placeSelection;
     document.getElementById("hotel-results").innerHTML = hotelSelection.join ("<br> <br><hr><br>");
     document.getElementById("restaurant-results").innerHTML = restaurantSelections.join ("<br> <br><hr><br>");

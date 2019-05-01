@@ -37,6 +37,7 @@ body
 .opaque-overlay
     position: absolute
     left: 0
+    top: 0
     height: 100%
     width: 100%
     background-color: rgba(255, 255, 255, 0.4)    
@@ -119,6 +120,7 @@ li.list-group-item:last-child
     @extend %buttons
     @extend %box
     display: none
+    margin: 5px 0px
     
 #reset-button
     @extend %buttons
@@ -135,9 +137,13 @@ li.list-group-item:last-child
     @extend %box
     margin: 0
     background-color: #fff
+    height: auto
+    overflow-x: hidden
     min-height: 200px
-    max-height: 453px
+    max-height: 30vw
+    max-width: 30vw
     text-align: center
+    padding-left: 0
     padding: 10px
     padding-bottom: 25px
 
@@ -169,7 +175,7 @@ hr
     left: 0
     width: 100%
     
-.results-footer
+#results-footer
     @extend %style-title
     font-size: 80px
     margin: 30px
@@ -197,3 +203,35 @@ hr
     margin: 20px
     color: $primary-color
     text-align: center
+
+/*phone adjustments*/
+    
+@media only screen and (max-width: 769px)
+    #map
+        max-height: 30vh
+        margin: 5px 0px
+    #selection-box
+        max-height: 35vh
+        width: 100%
+        margin: 0px
+        max-width: 100%
+    #next-button
+        width: 100%
+        height: 40px
+    #reset-button
+        height: 40px
+    #selection-section
+        padding: 0px
+    .results-box
+        max-height: 22vh
+        min-height: 10vh
+        width: 100%
+        max-width: 100%
+        margin: 5px
+    #results-footer
+        display: none
+    #place-results
+        font-size: 50px
+        margin: 10px
+
+/* When starting to use sass, type into console: sass --watch main.sass:main.css */
