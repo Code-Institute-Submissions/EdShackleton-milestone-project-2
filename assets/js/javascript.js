@@ -102,6 +102,17 @@
         ]
      }
      map = new google.maps.Map(document.getElementById('map'), mapOptions);
+     var autocomplete = new google.maps.places.Autocomplete(address);
+     
+     function myFunction(x) {
+    if (x.matches) {
+        document.getElementById("sub-title").style.display = "none";
+        }
+    }
+    
+    var x = window.matchMedia("(max-width: 330px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction)
  }
 
  //adding geocoding
@@ -110,6 +121,11 @@ var stringPlaceSelection = "";
 
  function codeAddress() {
      var address = document.getElementById('address').value;
+     
+     hotelSelection = [];
+    restaurantSelections = [];
+    sightSelections = [];
+
      
      function capitalize_Words(str)
      {
@@ -157,6 +173,17 @@ var stringPlaceSelection = "";
      
      return marker;
  }
+
+
+//enter press to select
+
+var input = document.getElementById("address");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("go-button").click();
+  }
+});
 
  //display hotels in area
 
@@ -341,7 +368,7 @@ function getFinalResults() {
         }
     }
     
-    var x = window.matchMedia("(max-width: 450px)")
+    var x = window.matchMedia("(max-width: 769px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction)
     

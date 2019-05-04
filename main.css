@@ -3,11 +3,12 @@
 .title, #results-top-title, #selection-box {
   color: #333333;
   margin: 5px;
-  font-family: Roboto; }
+  font-family: Roboto;
+  text-align: center; }
 
 #address, #map, #selection-box, #go-button, #next-button, #reset-button, .results-box {
   margin: 5px;
-  border: 1px solid black;
+  border: none;
   -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3); }
@@ -15,7 +16,9 @@
 #go-button, #next-button, #reset-button {
   background-color: #be01d7;
   color: white;
-  font-family: Roboto; }
+  font-family: Roboto;
+  border-radius: 4px;
+  font-size: 14px; }
 
 .nav-title, #results-footer, #place-results {
   font-family: "Mr Dafoe", cursive;
@@ -39,9 +42,10 @@ body {
 
 /* Nav bar */
 .nav-title {
-  font-size: 32px;
+  font-size: 38px;
   margin-top: 5px;
-  margin-bottom: 10px; }
+  margin-bottom: 0px;
+  display: inline-block; }
 
 nav.navbar.navbar-default {
   margin-bottom: 0px;
@@ -50,24 +54,26 @@ nav.navbar.navbar-default {
 
 /* Titles */
 #top-title {
-  margin-top: 0; }
-
-#selection-box-title {
-  text-align: center;
-  display: none; }
+  margin-top: 5px; }
 
 #results-top-title {
   margin-top: 0;
   text-align: center; }
 
 /* Search Function */
+#address {
+  border-radius: 0px;
+  font-family: Roboto; }
+
 #search-and-go {
-  align-items: center; }
+  align-items: center;
+  padding: 0px 2px; }
 
 /* Map and results */
 #map {
   height: 500px;
-  width: 100%; }
+  width: 100%;
+  margin: 0px; }
 
 #selection-box {
   margin: 0;
@@ -92,12 +98,19 @@ li.list-group-item:last-child {
   border-top: 0px; }
 
 /* Buttons */
+#go-button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-right: 0px; }
+
 #next-button {
   display: none;
   margin: 5px 0px; }
 
 #reset-button {
-  display: none; }
+  display: none;
+  position: absolute;
+  right: 5px; }
 
 /*results */
 #results-section {
@@ -109,7 +122,7 @@ li.list-group-item:last-child {
   height: auto;
   overflow-x: hidden;
   min-height: 200px;
-  max-height: 30vw;
+  max-height: 40vh;
   max-width: 30vw;
   text-align: center;
   padding-left: 0;
@@ -166,15 +179,19 @@ hr {
 
 /*phone adjustments */
 @media only screen and (max-width: 769px) {
+  .nav-title {
+    font-size: 32px; }
+
   #map {
     max-height: 30vh;
-    margin: 5px 0px; }
+    margin: 5px 0px;
+    padding: 20px; }
 
   #selection-box {
     max-height: 35vh;
     width: 100%;
-    margin: 0px;
-    max-width: 100%; }
+    max-width: 100%;
+    margin: 0px; }
 
   #next-button {
     width: 100%;
@@ -182,9 +199,6 @@ hr {
 
   #reset-button {
     height: 40px; }
-
-  #selection-section {
-    padding: 0px; }
 
   .results-box {
     max-height: 22vh;
@@ -199,6 +213,11 @@ hr {
   #place-results {
     font-size: 50px;
     margin: 10px; } }
+/* Bug-fixing */
+.row {
+  margin-left: 0;
+  margin-right: 0; }
+
 /* When starting to use sass, type into console: sass --watch main.sass:main.css */
 
 /*# sourceMappingURL=main.css.map */

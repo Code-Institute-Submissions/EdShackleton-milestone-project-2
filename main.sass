@@ -8,10 +8,11 @@ $primary-color: #be01d7
     color: #333333
     margin: 5px
     font-family: Roboto
+    text-align: center
 
 %box
     margin: 5px
-    border: 1px solid black
+    border: none
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.3)
     -moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.3)
     box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.3)
@@ -20,6 +21,8 @@ $primary-color: #be01d7
     background-color: $primary-color
     color: white
     font-family: Roboto
+    border-radius: 4px
+    font-size: 14px
     
 %style-title
     font-family: 'Mr Dafoe', cursive
@@ -46,9 +49,10 @@ body
 
 .nav-title
     @extend %style-title
-    font-size: 32px
+    font-size: 38px
     margin-top: 5px
-    margin-bottom: 10px
+    margin-bottom: 0px
+    display: inline-block
 
 nav.navbar.navbar-default
     margin-bottom: 0px
@@ -61,11 +65,8 @@ nav.navbar.navbar-default
     @extend %titles
 
 #top-title
-    margin-top: 0
+    margin-top: 5px
 
-#selection-box-title
-    text-align: center
-    display: none
 #results-top-title
     @extend %titles
     margin-top: 0
@@ -75,9 +76,12 @@ nav.navbar.navbar-default
     
 #address
     @extend %box
+    border-radius: 0px
+    font-family: Roboto
 
 #search-and-go
     align-items: center
+    padding: 0px 2px
 
 /* Map and results */
     
@@ -85,6 +89,7 @@ nav.navbar.navbar-default
     @extend %box
     height: 500px
     width: 100%
+    margin: 0px
     
 #selection-box
     @extend %box
@@ -115,6 +120,9 @@ li.list-group-item:last-child
 #go-button
     @extend %buttons
     @extend %box
+    border-top-left-radius: 0px
+    border-bottom-left-radius: 0px
+    margin-right: 0px
     
 #next-button
     @extend %buttons
@@ -126,6 +134,8 @@ li.list-group-item:last-child
     @extend %buttons
     @extend %box
     display: none
+    position: absolute
+    right: 5px
     
 /*results*/
 
@@ -140,7 +150,7 @@ li.list-group-item:last-child
     height: auto
     overflow-x: hidden
     min-height: 200px
-    max-height: 30vw
+    max-height: 40vh
     max-width: 30vw
     text-align: center
     padding-left: 0
@@ -207,21 +217,23 @@ hr
 /*phone adjustments*/
     
 @media only screen and (max-width: 769px)
+    
+    .nav-title
+        font-size: 32px
     #map
         max-height: 30vh
         margin: 5px 0px
+        padding: 20px
     #selection-box
         max-height: 35vh
         width: 100%
-        margin: 0px
         max-width: 100%
+        margin: 0px
     #next-button
         width: 100%
         height: 40px
     #reset-button
         height: 40px
-    #selection-section
-        padding: 0px
     .results-box
         max-height: 22vh
         min-height: 10vh
@@ -233,5 +245,11 @@ hr
     #place-results
         font-size: 50px
         margin: 10px
+        
+/* Bug-fixing */
+
+.row 
+    margin-left: 0
+    margin-right: 0
 
 /* When starting to use sass, type into console: sass --watch main.sass:main.css */
