@@ -76,7 +76,7 @@ nav.navbar.navbar-default {
   margin: 0px; }
 
 #selection-box {
-  margin: 0;
+  margin: 0px;
   background-color: fff;
   display: none;
   width: 100%; }
@@ -85,8 +85,7 @@ nav.navbar.navbar-default {
   height: auto;
   max-height: 446px;
   overflow-x: hidden;
-  padding-left: 0;
-  max-width: 250px; }
+  padding-left: 0; }
 
 .input-group-addon:first-child {
   border: 0;
