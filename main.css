@@ -26,7 +26,7 @@
 
 /* Background */
 body {
-  background: url(/assets/images/background.jpg) no-repeat center center fixed;
+  background: url(assets/images/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -78,7 +78,8 @@ nav.navbar.navbar-default {
 #selection-box {
   margin: 0;
   background-color: fff;
-  display: none; }
+  display: none;
+  width: 100%; }
 
 .scrollable-menu {
   height: auto;
@@ -219,6 +220,6 @@ hr {
   margin-left: 0;
   margin-right: 0; }
 
-/* When using sass, type into console: sass --watch main.sass:main.css */
+/* When starting to use sass, type into console: sass --watch main.sass:main.css */
 
 /*# sourceMappingURL=main.css.map */
