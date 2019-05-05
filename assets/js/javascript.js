@@ -122,7 +122,7 @@ var stringPlaceSelection = "";
  function codeAddress() {
      var address = document.getElementById('address').value;
      
-     hotelSelection = ["You haven't selected a hotel"];
+     hotelSelection = [];
     restaurantSelections = [];
     sightSelections = [];
 
@@ -327,7 +327,7 @@ function setMapOnAll(map) {
 
 var temporarySelection = [];
 var placeSelection = [];
-var hotelSelection = ["You haven't selected a hotel"];
+var hotelSelection = [];
 var restaurantSelections = [];
 var sightSelections = [];
 
