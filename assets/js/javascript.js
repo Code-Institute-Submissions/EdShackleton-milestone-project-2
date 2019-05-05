@@ -306,7 +306,7 @@ input.addEventListener("keyup", function(event) {
 //Start Again
 
 function startAgain() {
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
 }
 
 //Remove markers when next is pressed
