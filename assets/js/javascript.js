@@ -122,7 +122,7 @@ var stringPlaceSelection = "";
  function codeAddress() {
      var address = document.getElementById('address').value;
      
-     hotelSelection = [];
+     hotelSelection = ["You haven't selected a hotel"];
     restaurantSelections = [];
     sightSelections = [];
 
@@ -132,7 +132,6 @@ var stringPlaceSelection = "";
      return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
      }
      placeSelection = `<strong>` + capitalize_Words(address) + '</strong>';
-     console.log(placeSelection);
      stringPlaceSelection += placeSelection;
      window.localStorage.setItem('stringPlaceSelection', JSON.stringify(placeSelection));
      console.log(stringPlaceSelection);
@@ -328,7 +327,7 @@ function setMapOnAll(map) {
 
 var temporarySelection = [];
 var placeSelection = [];
-var hotelSelection = [];
+var hotelSelection = ["You haven't selected a hotel"];
 var restaurantSelections = [];
 var sightSelections = [];
 

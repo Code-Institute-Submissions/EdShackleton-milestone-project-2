@@ -105,7 +105,8 @@ li.list-group-item:last-child {
 
 #next-button {
   display: none;
-  margin: 5px 0px; }
+  margin: 5px 0px;
+  width: 100%; }
 
 #reset-button {
   display: none;
