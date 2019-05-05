@@ -94,9 +94,6 @@ I deployed the project using Github.
 
 I regularly pushed my code to Github to keep it up-to-date and safe.
 
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
 MEDIA
 
 The background photo is the only outside asset, which was taken from:
