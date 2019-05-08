@@ -86,6 +86,9 @@ the opaque layer. I realised this was being caused by a container-fluid being ne
 I had trouble getting the google maps to display the markers, thanks to a chat with my mentor, Chris Zielinski, he managed to help me
 find the appropriate Maps API information, and I resolved this.
 
+I also had friends test the website, with one common theme: I'd removed the top-title and sub-title on mobile devices.
+They confirmed they didn't know what they were selecting, as this was crutial to the design. I added them back in.
+
 
 
 DEPLOYMENT
@@ -93,6 +96,10 @@ DEPLOYMENT
 I deployed the project using Github.
 
 I regularly pushed my code to Github to keep it up-to-date and safe.
+
+There were 2 bugs I picked up after deploying the page: the first was the absence of a background image. I later learned that it was
+the file path and how Github handles it. I simply removed the initial /. Secondly was the start again stopped wortking. I fixed this
+easily by updating the link.
 
 MEDIA
 
